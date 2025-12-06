@@ -11,11 +11,13 @@ body{
 }
 
 .wrap{
-  max-width:900px;
-  width:100%;
-  margin:auto;
-  padding:14px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
 
 .plant-info{
   display:flex;
