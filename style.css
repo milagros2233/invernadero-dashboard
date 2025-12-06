@@ -72,3 +72,15 @@ button{
 
 .main{background:var(--primary);color:#022f02}
 .ghost{background:#1d221f;color:white}
+
+.button-group {
+  display: flex;           /* Activa Flexbox */
+  gap: 10px;               /* Espacio entre los botones */
+  flex-wrap: wrap;         /* Para que se muevan a otra línea si la pantalla es pequeña */
+}
+
+.button-group button {
+  flex: 1;                 /* Opcional: hace que todos los botones tengan el mismo ancho */
+  min-width: 120px;        /* Evita que queden demasiado pequeños en pantallas pequeñas */
+}
+

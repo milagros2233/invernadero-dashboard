@@ -55,11 +55,14 @@
 
   </div>
 
-  <h3>Controles</h3>
+    <h3>Controles</h3>
+    <div class="button-group">
+        <button class="main" onclick="send('bomba',1)">Regar Ahora</button>
+        <button class="ghost" onclick="send('luz','toggle')">Toggle Luz</button>
+        <button class="ghost" onclick="send('vent','toggle')">Toggle Ventilador</button>
+    </div>
 
-  <button class="main" onclick="send('bomba',1)">Regar Ahora</button>
-  <button class="ghost" onclick="send('luz','toggle')">Toggle Luz</button>
-  <button class="ghost" onclick="send('vent','toggle')">Toggle Ventilador</button>
+
 
 </div>
 
