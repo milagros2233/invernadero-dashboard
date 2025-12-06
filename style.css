@@ -1,0 +1,72 @@
+:root{
+  --bg:#0f1610;
+  --card:#111614;
+  --muted:#9aa69b;
+  --primary:#17cf17;
+  --danger:#ff5252;
+}
+
+body{
+  margin:0;background:var(--bg);color:white;font-family:Arial;
+}
+
+.wrap{
+  max-width:900px;
+  width:100%;
+  margin:auto;
+  padding:14px;
+}
+
+.plant-info{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.plant-info img{
+  width:90px;height:90px;border-radius:12px;object-fit:cover;
+}
+
+.plant-name{font-size:19px;font-weight:800}
+.plant-type{color:var(--muted);font-size:13px}
+
+.card{
+  background:var(--card);padding:14px;margin-top:12px;
+  border-radius:14px;box-shadow:0 5px 16px rgba(0,0,0,0.5)
+}
+
+.title{font-size:22px;font-weight:700;margin-bottom:8px}
+
+.grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:12px
+}
+
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr;}
+}
+
+.stat{
+  padding:10px;border-radius:12px;background:#1a1f1c
+}
+
+.big{
+  font-size:22px;font-weight:700;margin-top:6px
+}
+
+.progress{
+  height:8px;background:#333;border-radius:8px;margin-top:6px
+}
+
+.progbar{
+  height:100%;background:var(--primary);width:0%
+}
+
+.progbar.danger{background:var(--danger)}
+
+button{
+  width:100%;padding:14px;border-radius:12px;font-size:16px;
+  font-weight:bold;border:none;margin-top:10px
+}
+
+.main{background:var(--primary);color:#022f02}
+.ghost{background:#1d221f;color:white}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Invernadero</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+
+  <div class="title">🌱 Mi Planta - Clavelina</div>
+
+  <div class="card">
+    <div class="plant-info">
+      <img id="plantImg" src="https://i.imgur.com/GxgE4fi.jpeg">
+      <div>
+        <div class="plant-name">Clavelina</div>
+        <div class="plant-type">Planta Ornamental</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Condiciones</h3>
+
+  <div class="grid">
+
+    <div class="stat">
+      <div>🌡 Temperatura</div>
+      <div class="big" id="tBig">--</div>
+      <div class="progress"><div id="tBar" class="progbar"></div></div>
+    </div>
+
+    <div class="stat">
+      <div>💧 Humedad Aire</div>
+      <div class="big" id="hBig">--</div>
+      <div class="progress"><div id="hBar" class="progbar"></div></div>
+    </div>
+
+    <div class="stat">
+      <div>🌱 Humedad Suelo</div>
+      <div class="big" id="sBig">--</div>
+      <div class="progress"><div id="sBar" class="progbar"></div></div>
+    </div>
+
+    <div class="stat">
+      <div>💦 Nivel del Agua</div>
+      <div class="big" id="nBig">--</div>
+      <div class="progress"><div id="nBar" class="progbar danger"></div></div>
+    </div>
+
+  </div>
+
+  <h3>Controles</h3>
+
+  <button class="main" onclick="send('bomba',1)">Regar Ahora</button>
+  <button class="ghost" onclick="send('luz','toggle')">Toggle Luz</button>
+  <button class="ghost" onclick="send('vent','toggle')">Toggle Ventilador</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
